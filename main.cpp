@@ -1,9 +1,9 @@
-#include <iostream>
-#include <windows.h>
-#include <conio.h>
-#include <stdlib.h>
-#include <random>
-#include <time.h>
+#include <iostream>  // c++ specific
+#include <random>    // c++ specific
+#include <windows.h> // c specific
+#include <conio.h>   // c specific
+#include <stdlib.h>  // c specific
+#include <time.h>    // c specific
 
 using namespace std;
 
@@ -25,11 +25,11 @@ char inloc(int a, int b)
     if(tabla[a][b] == 2) return '0';
 }
 
-bool primeste(int &a)
+bool primeste(int &a)  // transmisa ca referinta
 {
     cin >> a;
 
-    while(!cin)
+    while(!cin)        // forteaza reluarea introducerii daca 'char' invalid
     {
         cout << "Introduceti din nou\n";
         cin.clear();
